@@ -1,11 +1,11 @@
-# SaintseiyaPF
+# Saint Seiya Projecto Final
 
 El proyecto esta basado en la famosa serie “Los caballeros del Zodiaco”, para el desarrollo de esta me base en la API publica de Diego Chagas la cual contiene la información correspondiente.
 
-# INFORMACIÓN
+# Información
 Nombre: Emanuel Clemente Urrutia Picarte
 
-# DATOS DEL PROYECTO
+# Datos del Proyecto
 Acceso o Login
 
 Usuario: usuario@gmail.com
