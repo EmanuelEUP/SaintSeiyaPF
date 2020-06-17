@@ -4,8 +4,6 @@ El proyecto esta basado en la famosa serie “Los caballeros del Zodiaco”, par
 
 # INFORMACIÓN
 Nombre: Emanuel Clemente Urrutia Picarte
-Rut: 18835473-4
-Correo: eurrutiapc@gmail.com
 
 # DATOS DEL PROYECTO
 Acceso o Login
