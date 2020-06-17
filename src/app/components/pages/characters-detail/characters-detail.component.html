@@ -1,0 +1,134 @@
+<!-- SECCIÓN 01 -->
+
+<div class="bgsection04">
+
+    <div *ngIf="!characterLoaded" class="py-5">
+
+        <div class="d-flex justify-content-center text-warning">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div *ngIf="characterLoaded && characters">
+
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-12">
+                    <a class="btn btn-outline-warning mt-2 font-weight-bold ml-3 font03" routerLink="{{volverURL}}" routerLinkActive="active">VOLVER</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-6 my-2 order-1 order-sm-1 ">
+
+                    <!--| search: query | gender: genderFilters | status: statusFilters-->
+
+                    <div class="card mb-3 rounded border-warning bg-transparent text-white" style="max-width: 100%;">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    <h5 class="card-title text-warning font-weight-bold font03">{{ characters.id }}) {{ characters.name | titlecase }}</h5>
+
+                                    <img src="{{characters.image}}" class="img-fluid border border-warning rounded">
+
+                                    <ul class="list-group list-group-flush " style="font-size: small;">
+                                        <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Gender:</b> {{ characters.gender }}</li>
+                                        <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Nationality:</b> {{ characters.nationality }}</li>
+                                        <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Midia:</b> {{ characters.midia }}</li>
+                                        <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Debut:</b> {{ characters.debut }}</li>
+
+                                        <li class="list-group-item bg-transparent border-top border-warning">
+                                            <b class="font03">Attacks:</b>
+
+                                            <ul class="list-group bg-transparent border-warning">
+                                                <li class=" bg-transparent border-warning" *ngFor="let attack of characters.attacks; let i = index">{{attack}}</li>
+                                            </ul>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-12 col-sm-6 my-2 order-2 order-sm-2 border-warning ">
+
+
+                    <div class="row">
+
+                        <div class="col-12">
+
+
+                            <div class="card mb-3 rounded border-warning bg-transparent text-white" style="max-width: 100%;">
+                                <div class="row no-gutters">
+                                    <div class="col-12">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-warning font-weight-bold font03">Cloths</h5>
+
+                                            <table class="table table-sm text-white table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="text-warning font-weight-bold font03">#</th>
+                                                        <th scope="col" class="text-warning font-weight-bold font03">Image</th>
+                                                        <th scope="col" class=" text-warning font-weight-bold font03">Cloth</th>
+                                                        <th scope="col" class=" text-warning font-weight-bold font03">Rank</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let cloth of characters.cloths; let indice = index">
+                                                        <th scope="row" class="font01">{{indice}}</th>
+                                                        <td><img src="{{cloth.image}}" class="img-fluid" width="35" height="35" alt="..."></td>
+                                                        <td class="font01">{{cloth.cloth}}</td>
+                                                        <td class="font01">{{cloth.rank}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<!-- FIN SECCIÓN -->

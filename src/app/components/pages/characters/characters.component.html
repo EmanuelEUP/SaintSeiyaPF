@@ -1,0 +1,112 @@
+<!-- SECCIÓN 01 -->
+
+<div class="bgsection04">
+
+    <div *ngIf="!characterLoaded" class="py-5">
+
+        <div class="d-flex justify-content-center text-warning">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid" *ngIf="characterLoaded && characters">
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <form>
+
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6 ml-3">
+                            <label for="inputEmail4" class="text-warning font01">Search : </label>
+                            <input type="email" class="form-control form-control-sm bg-transparent border border-warning text-warning font-weight-bold" id="IDFRM_BUSCAR" name="IDFRM_BUSCAR" [(ngModel)]="query" (ngModelChange)="searchEvent()">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="inputPassword4" class="text-warning font01">Gender :</label>
+                            <select class="form-control form-control-sm bg-transparent border border-warning text-warning font-weight-bold" id="IDFRM_GENDER" name="IDFRM_GENDER" [(ngModel)]="gender" (ngModelChange)="onGenderEvent()">
+                                <option value="" selected>All</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                              </select>
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12 col-sm-12">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <!-- | status: statusFilters-->
+
+                        <div class="col-12 col-sm-6 col-md-3 my-2" *ngFor="let character of characters | searchCharacter: query | genderCharacter: gender">
+
+
+                            <div class="card shadow p-3 mb-5 rounded border-warning bg-transparent text-white " style="width: 18rem;">
+
+                                <div class="card-header bg-transparent border-warning ">
+                                    <h6 class="card-title text-warning font-weight-bold text-uppercase font03">{{ character.id }}) {{ character.name | titlecase }}</h6>
+                                </div>
+
+                                <img src="{{character.image}}" width="100%" height="200" alt="...">
+
+                                <!--
+
+                                <div class="card-body">
+                                    <p class="card-text text-justify">
+
+                                    </p>
+                                </div>
+
+                                -->
+
+                                <ul class="list-group list-group-flush " style="font-size: small;">
+                                    <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Gender:</b> {{ character.gender }}</li>
+                                    <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Nationality:</b> {{ character.nationality }}</li>
+                                    <li class="list-group-item bg-transparent border-top border-warning font01"><b class="font03">Midia:</b> {{ character.midia }}</li>
+                                </ul>
+
+                                <div class="card-footer bg-transparent border-warning">
+                                    <button type="button" class="btn btn-warning w-100 mt-2 font-weight-bold font03" value="{{ character.id }}" (click)="getCharactersDetail(character.id)">SEE DETAIL</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FIN SECCIÓN -->

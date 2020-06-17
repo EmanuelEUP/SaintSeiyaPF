@@ -1,0 +1,223 @@
+.body {
+    background-image: url();
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* BACKGROUND SECCTIONS */
+
+.bgsection01 {
+    background-image: url("./assets/img/bg01.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    //animation: Animsection01 10s infinite linear alternate;
+}
+
+@keyframes Animsection01 {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.bgsection02 {
+    background-image: url("./assets/img/bg02.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: Animsection02 10s infinite linear alternate;
+}
+
+@keyframes Animsection02 {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.bgsection03 {
+    background-image: url("./assets/img/bg03.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: Animsection03 10s infinite linear alternate;
+}
+
+@keyframes Animsection03 {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.bgsection04 {
+    background-image: url("./assets/img/bg04.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: Animsection04 5s infinite linear alternate;
+}
+
+@keyframes Animsection04 {
+    from {
+        background-position: bottom left;
+    }
+    to {
+        background-position: top right;
+    }
+}
+
+.bgsection05 {
+    background-image: url("./assets/img/bg05.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: Animsection05 5s infinite linear alternate;
+}
+
+@keyframes Animsection05 {
+    from {
+        background-position: bottom right;
+    }
+    to {
+        background-position: top left;
+    }
+}
+
+
+/* BACKGROUND SECCTIONS FIN */
+
+
+/* BACKGROUND COLORS TRANSPARENT (OPACITY 0.6) */
+
+.bgcolortransp01 {
+    transition: all ease .4s;
+    background-color: rgba($color: #000000, $alpha: 0.9)
+}
+
+.bgcolortransp02 {
+    transition: all ease .4s;
+    background-color: rgba($color: #000000, $alpha: 0.5)
+}
+
+
+/* BACKGROUND COLORS TRANSPARENT (OPACITY 0.6) FIN */
+
+
+/* BACKGROUND COLORS   */
+
+.bgcolor01 {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.bgcolor02 {
+    background-color: rgba($color: #000000, $alpha: 1.0);
+}
+
+.bgcolor03 {
+    background: rgb(255, 234, 41);
+    background: -moz-linear-gradient(top, rgba(255, 234, 41, 1) 0%, rgba(229, 184, 3, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 234, 41, 1) 0%, rgba(229, 184, 3, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 234, 41, 1) 0%, rgba(229, 184, 3, 1) 100%);
+}
+
+.bgcolor04 {
+    background: rgb(69, 72, 77);
+    background: -moz-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.bgcolor05 {
+    background: rgb(255, 48, 25);
+    background: -moz-linear-gradient(top, rgba(255, 48, 25, 1) 0%, rgba(207, 4, 4, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 48, 25, 1) 0%, rgba(207, 4, 4, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 48, 25, 1) 0%, rgba(207, 4, 4, 1) 100%);
+}
+
+.bgcolor06 {
+    background: rgb(254, 255, 232);
+    background: -moz-linear-gradient(top, rgba(254, 255, 232, 1) 0%, rgba(214, 219, 191, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(254, 255, 232, 1) 0%, rgba(214, 219, 191, 1) 100%);
+    background: linear-gradient(to bottom, rgba(254, 255, 232, 1) 0%, rgba(214, 219, 191, 1) 100%);
+}
+
+
+/* CLASES PARA LOS VIDEOS */
+
+.VIDEO01 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+/* LETRAS */
+
+
+/*   FONTS FACES    */
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('./assets/font/roboto_bold_macroman/Roboto-Bold-webfont.eot');
+    src: url('./assets/font/roboto_bold_macroman/Roboto-Bold-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('./assets/font/roboto_light_macroman/Roboto-Light-webfont.eot');
+    src: url('./assets/font/roboto_light_macroman/Roboto-Light-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('./assets/font/roboto_thin_macroman/Roboto-Thin-webfont.eot');
+    src: url('./assets/font/roboto_thin_macroman/Roboto-Thin-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font01 {
+    font-family: "robotolight" !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font02 {
+    font-family: "robotothin" !important;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font03 {
+    font-family: "robotobold" !important;
+    font-weight: normal;
+    font-style: normal;
+}

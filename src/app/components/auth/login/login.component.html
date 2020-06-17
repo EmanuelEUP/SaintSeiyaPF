@@ -1,0 +1,114 @@
+<div class="bgsection05">
+
+    <video autoplay muted loop class="VIDEO01" style="width: 100%;">
+    <source src="../../../../assets/videos/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+    <!-- SECCIÓN 01 -->
+
+    <div class="my-2">
+
+        <div class="container-fluid  ">
+
+            <div class="row">
+
+                <div class="col-6 col-sm-6 ">
+
+                    <div class="text-center text-sm-left text-white font02 ">
+                        <img src="./../../../../assets/img/logo.png" class=" my-1 " width="150px" height="50px" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-sm-6">
+
+                    <div class="text-center text-sm-right text-white mt-3 mt-sm-0">
+
+                        <img src="./../../../../assets/img/scalab.png" class=" my-1 " width="150px" height="50px" />
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECCIÓN 02 -->
+
+    <div class="mt-5 pt-5 ">
+
+        <div class="container">
+
+            <div class="row justify-content-center ">
+
+                <div class="col-12 col-sm-6 col-md-4 bgcolortransp02 rounded-top pt-4 px-5 border-top border-left border-right border-warning">
+
+                    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+                        <div class="form-group justify-content-center text-center">
+                            <label for="IDFRM_NAME" class="font-weight-bold text-light font02 shadow-lg font03" style="font-size: medium;">EMAIL :</label>
+                            <input type="email" class="form-control form-control-sm bg-transparent border-warning text-warning font-weight-bold font03" id="IDFRM_NAME" name="IDFRM_NAME" aria-describedby="emailHelp" placeholder="Username" formControlName="email">
+                        </div>
+                        <div class="form-group justify-content-center text-center">
+                            <label for="IDFRM_PASS" class="font-weight-bold text-light font02 shadow-lg font03" style="font-size: medium;">PASSWORD :</label>
+                            <input type="password" class="form-control form-control-sm bg-transparent border-warning text-warning font-weight-bold font03" id="IDFRM_PASS" name="IDFRM_PASS" placeholder="Password" formControlName="password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-sm btn-lg my-2 font02 d-block mx-auto shadow-lg w-100 mt-4 font03" value="login">ENTER</button>
+                        <!--(click)="loginEvent('login')"-->
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center " *ngIf="blnError">
+
+                <div class="col-12 col-sm-6 col-md-4 bgcolortransp02 border-left border-right border-warning">
+
+                    <div class="alert  border-danger text-danger bgcolor01 font01" style="font-size: small;" role="alert">
+                        <strong class="font03">Error :</strong> {{msgError}}
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-sm-6 col-md-4 bgcolortransp02 rounded-bottom border-left border-right border-bottom border-warning">
+
+                    <div class="text-center text-warning ">
+
+                        <p class="font01" style="font-size: small;">
+                            <strong class="font03">SAINT SEIYA PROYECT</strong>
+                            <br> All rights reserved</p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>

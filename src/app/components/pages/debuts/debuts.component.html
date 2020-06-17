@@ -1,0 +1,161 @@
+<!-- SECCIÓN 01 -->
+
+<div class="bgsection04">
+
+    <div *ngIf="!loading" class="py-5">
+
+        <div class="d-flex justify-content-center text-warning">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid">
+
+
+
+
+        <div class="row" *ngIf="loading && (debuts || debutsSingle)">
+
+            <div class="col-12">
+
+                <form>
+
+                    <div class="form-row">
+
+
+                        <div class="form-group col-md-2">
+                            <label for="inputPassword4" class="text-warning font01">ID/Number :</label>
+                            <select class="form-control form-control-sm bg-transparent border border-warning text-warning font-weight-bold" id="IDFRM_DEBUTS" name="IDFRM_DEBUTS" [(ngModel)]="DebutsFilter" (ngModelChange)="onDebutsEvent()">
+                                <option value="" selected>All</option>
+                                <option *ngFor="let debut of debutsCBB" value="{{debut.id}}">{{debut.name}}</option> 
+                              </select>
+                        </div>
+
+                        <div class="form-group col-md-2" *ngIf="loading && (debuts)">
+                            <label for="inputPassword4" class="text-warning font01">Midia :</label>
+                            <select class="form-control form-control-sm bg-transparent border border-warning text-warning font-weight-bold" id="IDFRM_MIDIA" name="IDFRM_MIDIA" [(ngModel)]="MidiaFilter" (ngModelChange)="onMidiaEvent()">
+                                <option value="" selected>All</option>
+                                <option value="Manga">Manga</option>
+                                <option value="Anime">Anime</option>
+                                <option value="Magazine">Magazine</option>
+                                <option value="Book">Book</option>
+                                <option value="Audio">Audio</option>
+                                <option value="Game">Game</option>
+                                <option value="Outside-story">Outside story</option>
+
+
+
+                              </select>
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row" *ngIf="debutsSingle">
+            <div class="col-12">
+
+                <div class="card mb-3 rounded border-warning bg-transparent text-white">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{debutsSingle.image}}" class="card-img" width="100%" height="350">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning font-weight-bold font03">{{ debutsSingle.id }}) {{ debutsSingle.name | titlecase }}</h5>
+                                <p class="card-text">
+                                    <small class="text-muted font03">Release : {{ debutsSingle.release }}</small>
+                                    <br>
+                                    <small class="text-muted font03">Midia : {{ debutsSingle.midia }}</small>
+                                </p>
+
+
+                                <p class="card-text font01" style="font-size: medium;"> {{ debutsSingle.description }} </p>
+                            </div>
+
+                            <!--
+                            <div class="card-footer bg-transparent border-warning">
+                                <button type="button" class="btn btn-warning w-100 mt-2 font-weight-bold" value="{{ data.id }}" (click)="getCharactersDetail(data.id)">VER DETALLE</button>
+                            </div>
+                            -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12 col-sm-12">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <!-- -->
+
+                        <div class="col-12 col-sm-6 my-2" *ngFor="let data of debuts | midiaDebuts: MidiaFilter">
+
+                            <div class="card mb-3 rounded border-warning bg-transparent text-white">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{data.image}}" class="card-img" width="100%" height="350">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-warning font-weight-bold">{{ data.id }}) {{ data.name | titlecase }}</h5>
+                                            <p class="card-text">
+                                                <small class="text-muted">Release : {{ data.release }}</small>
+                                                <br>
+                                                <small class="text-muted">Midia : {{ data.midia }}</small>
+                                            </p>
+
+
+                                            <p class="card-text" style="font-size: medium;"> {{ data.description }} </p>
+                                        </div>
+
+                                        <!--
+                                        <div class="card-footer bg-transparent border-warning">
+                                            <button type="button" class="btn btn-warning w-100 mt-2 font-weight-bold" value="{{ data.id }}" (click)="getCharactersDetail(data.id)">VER DETALLE</button>
+                                        </div>
+                                        -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FIN SECCIÓN -->

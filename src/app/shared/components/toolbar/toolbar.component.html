@@ -1,0 +1,53 @@
+<div [class.fixed-top]="valid_fixedtop">
+
+    <nav class="navbar navbar-expand-lg navbar-dark text-white " [ngClass]="{'bgcolor01': valid_fixedtop,'bgcolor02':valid_bgcolor02 }" [ngClass]="{'bgcolor02': info.priority > 30}">
+
+        <a class="navbar-brand" href="#">
+            <img src="./../../../../assets/img/logo.png" width="200" height="80" alt="" loading="lazy">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto font03" style="font-size: large;" (click)="fnc_navoptclick($event)">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/characters" routerLinkActive="active">CHARACTERS <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/curiosities" routerLinkActive="active">CURIOSITIES <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/classes" routerLinkActive="active">CLASSES <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/debuts" routerLinkActive="active">DEBUTS <span class="sr-only">(current)</span></a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" routerLinkActive="active" routerLink="/login" *ngIf="authSvc.userData$ | async;" (click)="onLogout()">
+                        LOGOUT
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+</div>
