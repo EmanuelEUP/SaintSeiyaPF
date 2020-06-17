@@ -16,9 +16,6 @@ Password: 123456
 Usuario: usuario02@gmail.com
 Password:123456
 
-Usuario: ingenieromiguelch@gmail.com
-Password:123456
-
 API : Saint Seiya API
 URL: https://diegochagas.com/saint-seiya-api/#/
 
